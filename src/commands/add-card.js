@@ -82,6 +82,7 @@ var __ = function(
     var params = {
       name: options.title,
       idList: listId,
+      due: options.due,
       desc: options.description ? options.description : "",
       pos:
         ["top", "bottom"].indexOf(options.cardPosition) > -1
@@ -159,6 +160,11 @@ var __ = function(
           help:
             "Force - will create the board and/or list if they don't already exist",
           flag: true,
+          required: false
+        },
+        due: {
+          abbr: "d",
+          help: "Due date of the card, written as YYYY-MM-DD",
           required: false
         },
         verbose: {
